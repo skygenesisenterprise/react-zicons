@@ -1,0 +1,141 @@
+{
+  "name": "@skygenesisenterprise/react-zicons",
+  "version": "0.1.0",
+  "description": "Typed, tree-shakeable React icon components for the Sky Genesis Enterprise ecosystem.",
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "phosphor",
+    "skygenesisenterprise",
+    "design-system",
+    "ui"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Sky Genesis Enterprise",
+    "url": "https://skygenesisenterprise.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skygenesisenterprise/react-zicons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skygenesisenterprise/react-zicons/issues"
+  },
+  "homepage": "https://github.com/skygenesisenterprise/react-zicons#readme",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./ssr": {
+      "types": "./dist/ssr/index.d.ts",
+      "import": "./dist/ssr/index.js",
+      "default": "./dist/ssr/index.js"
+    },
+    "./catalog": {
+      "types": "./dist/catalog/index.d.ts",
+      "import": "./dist/catalog/index.js",
+      "default": "./dist/catalog/index.js"
+    },
+    "./provider": {
+      "types": "./dist/provider/index.d.ts",
+      "import": "./dist/provider/index.js",
+      "default": "./dist/provider/index.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "default": "./dist/core/index.js"
+    },
+    "./icons": {
+      "types": "./dist/icons/generated/index.d.ts",
+      "import": "./dist/icons/generated/index.js",
+      "default": "./dist/icons/generated/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/generated/*.d.ts",
+      "import": "./dist/icons/generated/*.js",
+      "default": "./dist/icons/generated/*.js"
+    },
+    "./ssr/icons": {
+      "types": "./dist/ssr/generated/index.d.ts",
+      "import": "./dist/ssr/generated/index.js",
+      "default": "./dist/ssr/generated/index.js"
+    },
+    "./ssr/icons/*": {
+      "types": "./dist/ssr/generated/*.d.ts",
+      "import": "./dist/ssr/generated/*.js",
+      "default": "./dist/ssr/generated/*.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "packageManager": "pnpm@12.18.0",
+  "peerDependencies": {
+    "react": ">=18.2.0"
+  },
+  "scripts": {
+    "dev": "tsc --watch -p tsconfig.build.json --preserveWatchOutput",
+    "assets:sync": "tsx scripts/sync-assets.ts",
+    "assets:validate": "tsx scripts/validate-assets.ts",
+    "generate": "tsx scripts/generate.ts",
+    "generate:catalog": "tsx scripts/generate-catalog.ts",
+    "generate:icons": "tsx scripts/generate-icons.ts",
+    "generate:exports": "tsx scripts/generate-exports.ts",
+    "generate:types": "tsx scripts/generate-types.ts",
+    "clean": "tsx scripts/clean.ts",
+    "build": "tsx scripts/build.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:bundle": "tsx scripts/measure-bundle.ts",
+    "test:consumer": "tsx scripts/test-consumer.ts",
+    "test:next": "tsx scripts/test-next.ts",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "prepublishOnly": "pnpm build"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.8",
+    "@eslint/js": "^9.39.5",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.3",
+    "@types/node": "^22.15.18",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "esbuild": "^0.28.2",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "globals": "^16.4.0",
+    "jsdom": "^31.0.0",
+    "next": "^16.4.5",
+    "prettier": "^3.9.10",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^3.2.7"
+  }
+}

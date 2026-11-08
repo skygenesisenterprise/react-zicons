@@ -1,0 +1,13 @@
+{
+  "id": "phosphor",
+  "name": "Phosphor Icons",
+  "repository": "https://github.com/phosphor-icons/core",
+  "version": "2.1.1",
+  "commit": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+  "ref": "2b75f3ad12b420c9504ef05df8d2564a28f8500e",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2023 Phosphor Icons",
+  "website": "https://phosphoricons.com",
+  "weights": ["thin", "light", "regular", "bold", "fill", "duotone"],
+  "viewBox": "0 0 256 256"
+}
