@@ -12,8 +12,8 @@ import {
  * it can be rendered from React Server Components without a client boundary.
  */
 export const SSRBase: React.FunctionComponent<SSRBaseProps> = (props) => {
-  const { alt, children, weights, style, ...restProps } = props;
-  const config = resolveIconConfig(props);
+  const { alt, children, weights, style, color, size, weight, mirrored, ...restProps } = props;
+  const config = resolveIconConfig({ color, size, weight, mirrored });
 
   return (
     <svg

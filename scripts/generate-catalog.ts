@@ -73,7 +73,10 @@ export const sources = catalog.sources;
 
 function isEntrypoint(): boolean {
   const entry = process.argv[1];
-  return Boolean(entry) && pathToFileURL(resolve(entry)).href === import.meta.url;
+  if (!entry) {
+    return false;
+  }
+  return pathToFileURL(resolve(entry)).href === import.meta.url;
 }
 
 if (isEntrypoint()) {

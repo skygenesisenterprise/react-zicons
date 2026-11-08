@@ -145,7 +145,10 @@ export async function generateIcons(): Promise<void> {
 
 function isEntrypoint(): boolean {
   const entry = process.argv[1];
-  return Boolean(entry) && pathToFileURL(resolve(entry)).href === import.meta.url;
+  if (!entry) {
+    return false;
+  }
+  return pathToFileURL(resolve(entry)).href === import.meta.url;
 }
 
 if (isEntrypoint()) {

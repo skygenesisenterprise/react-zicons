@@ -8,6 +8,8 @@ export default tseslint.config(
     ignores: [
       "dist/**",
       "coverage/**",
+      "docs/**",
+      ".agents/**",
       "node_modules/**",
       "vendor/**",
       "src/icons/generated/**",

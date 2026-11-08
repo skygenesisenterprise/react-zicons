@@ -16,9 +16,9 @@ import {
  */
 export const IconBase = React.forwardRef<SVGSVGElement, IconBaseProps>(
   function IconBase(props, ref) {
-    const { alt, children, weights, style, ...restProps } = props;
+    const { alt, children, weights, style, color, size, weight, mirrored, ...restProps } = props;
     const context = React.useContext(IconContext);
-    const config = resolveIconConfig(props, context);
+    const config = resolveIconConfig({ color, size, weight, mirrored }, context);
 
     return (
       <svg

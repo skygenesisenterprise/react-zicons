@@ -62,7 +62,7 @@ export interface IconBaseProps extends IconProps {
   readonly weights: IconWeights;
 }
 
-export interface SSRBaseProps extends IconBaseProps {}
+export type SSRBaseProps = IconBaseProps;
 
 /** Type of a context-aware, ref-forwarding client icon component. */
 export type Icon = ForwardRefExoticComponent<IconProps & RefAttributes<SVGSVGElement>>;
